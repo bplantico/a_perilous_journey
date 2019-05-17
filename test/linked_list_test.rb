@@ -31,11 +31,10 @@ class LinkedListTest < Minitest::Test
     assert_equal 1, @list.count
   end
 
-  # def test_to_string_inserts_surname_into_string
-  #   assert_equal "The West Family", @list.to_string
-  # end
+  def test_to_string_inserts_surname_into_string
+    node = @list.append("West")
+
+    assert_equal "The West Family", @list.to_string
+  end
 
 end
-
-# > list.to_string
-# => "The West family"

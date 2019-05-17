@@ -15,9 +15,9 @@ class LinkedList
     string.count
   end
 
-  # def to_string
-  #
-  # end
+  def to_string
+    "The #{head.surname} Family"
+  end
 
 
 end
