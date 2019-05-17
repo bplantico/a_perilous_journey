@@ -33,8 +33,21 @@ class LinkedListTest < Minitest::Test
 
   def test_to_string_inserts_surname_into_string
     node = @list.append("West")
-
     assert_equal "The West Family", @list.to_string
   end
 
+  def test_case_name
+    node = @list.append("Rhodes")
+    require "pry"; binding.pry
+  end
+
 end
+
+# > list.append("Hardy")
+# => => <Node @surname="Hardy" @next_node=nil #5678904567890>
+# > list.head.next_node
+# => <Node @surname="Hardy" @next_node=nil #5678904567890>
+# > list.count
+# => 2
+# > list.to_string
+# => "The Rhodes family, followed by the Hardy family"
